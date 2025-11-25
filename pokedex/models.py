@@ -8,6 +8,7 @@ class Pokemon(models.Model):
         ('Planta', '🌿 Planta'),
         ('Eléctrico', '⚡ Eléctrico'),
         ('Normal', '⚪ Normal'),
+        ('Psquico', '⚪ Psiquico'),
     ]
 
     name = models.CharField(max_length=30, null=False)
@@ -16,6 +17,8 @@ class Pokemon(models.Model):
     height = models.IntegerField()
     picture = models.ImageField(upload_to='pokemons/', null=True, blank=True)
     trainer = models.ForeignKey('Trainer', on_delete=models.SET_NULL, null=True)
+    region = models.CharField(max_length=50, default="Kanto")
+
 
     def __str__(self):
         return self.name

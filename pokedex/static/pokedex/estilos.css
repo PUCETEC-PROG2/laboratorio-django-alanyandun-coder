@@ -1,0 +1,70 @@
+/* Fondo suave */
+body {
+    background: #f2f4f8 !important;
+}
+
+/* Cambiar título principal */
+p.text-center {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+/* Tarjetas (Pokemons) más redondeadas y con sombra */
+.card {
+    border-radius: 14px !important;
+    border: none !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+/* Imagen dentro de la tarjeta */
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    background: #eef1f6;
+}
+
+/* Botones */
+.btn {
+    border-radius: 10px !important;
+    font-weight: 600;
+}
+
+/* Botón agregar */
+.btn-success {
+    background-color: #4f46e5 !important;
+    border: none !important;
+}
+
+/* Botón ver */
+.btn-info {
+    background-color: #3b82f6 !important;
+    border: none !important;
+}
+
+/* Botón editar */
+.btn-warning {
+    background-color: #f59e0b !important;
+    border: none !important;
+}
+
+/* Botón borrar */
+.btn-danger {
+    background-color: #ef4444 !important;
+    border: none !important;
+}
+
+/* Lista de entrenadores */
+.list-group-item {
+    border-radius: 10px !important;
+    margin-bottom: 5px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb !important;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: #4f46e5;
+    font-weight: 600;
+}

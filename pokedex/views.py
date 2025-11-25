@@ -11,7 +11,7 @@ from pokedex.forms import PokemonForm
 
 
 def index(request):
-    pokemons = Pokemon.objects.all()
+    pokemons = Pokemon.objects.all().order_by("name")
     trainers = Trainer.objects.all()
     template = loader.get_template('index.html')
     return HttpResponse(template.render({'pokemons': pokemons, 'trainers': trainers}, request))

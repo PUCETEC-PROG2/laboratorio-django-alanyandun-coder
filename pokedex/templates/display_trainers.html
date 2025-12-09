@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="text-center mt-4">
+
+  <h2 class="mb-3">{{ trainer.first_name }} {{ trainer.last_name }}</h2>
+
+  {% if trainer.picture %}
+    <img src="{{ trainer.picture.url }}" alt="{{ trainer.first_name }}" class="img-fluid mb-3" style="max-width: 250px;">
+  {% else %}
+    <img src="{% static 'img/no-image.png' %}" alt="Sin imagen" class="img-fluid mb-3" style="max-width: 250px;">
+  {% endif %}
+
+  <p class="fs-5 mt-3">
+    Has elegido al entrenador: <strong>{{ trainer.first_name }} {{ trainer.last_name }}</strong>
+  </p>
+
+  <h4 class="mt-4">Características:</h4>
+
+  <ul class="list-unstyled">
+    <li><strong>Nombre:</strong> {{ trainer.first_name }} {{ trainer.last_name }}</li>
+    <li><strong>Fecha de nacimiento:</strong> {{ trainer.birthdate }}</li>
+    <li><strong>Nivel:</strong> {{ trainer.level }}</li>
+  </ul>
+
+  <a href="{% url 'pokedex:trainers' %}" class="btn btn-primary mt-3">Regresar</a>
+
+</div>
+{% endblock %}
